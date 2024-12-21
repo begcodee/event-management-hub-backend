@@ -47,7 +47,7 @@ app.use("/api/user", userRoutes);
 
 // Base page
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Welcome to Campus event management Hub endpoints for all interactions with the frontend')
 })
 
 // Admin-only route for event creation
