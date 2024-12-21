@@ -45,6 +45,11 @@ app.use('/api/auth', authRoutes); // Authentication routes
 app.use('/api/events', eventRoutes); // Event routes, protected by authentication
 app.use("/api/user", userRoutes);
 
+// Base page
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
 // Admin-only route for event creation
 app.post('/api/admin/events', [authMiddleware, checkAdmin], async (req, res) => {
   const { name, date, location, time, description, capacity } = req.body;
